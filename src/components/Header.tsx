@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
 
-const Header = forwardRef<HTMLElement>((props, ref) => {
+const Header = forwardRef<HTMLElement>((_,ref) => {
   const { theme, toggleTheme } = useTheme()
 
   return (

@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { Feedback } from '../types'
 import FeedbackItem from './FeedbackItem'
-import { gsapAnimations, setupScrollAnimations } from '../utils/gsap'
+import { setupScrollAnimations } from '../utils/gsap'
 import gsap from '../utils/gsap'
 
 interface FeedbackListProps {

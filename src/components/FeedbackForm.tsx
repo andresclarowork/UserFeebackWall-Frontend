@@ -15,8 +15,6 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ onAddFeedback }) => {
   const [isSuccess, setIsSuccess] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
   const submitButtonRef = useRef<HTMLButtonElement>(null)
-  const nameInputRef = useRef<HTMLInputElement>(null)
-  const messageInputRef = useRef<HTMLTextAreaElement>(null)
   const { animateFormField } = useGSAPAnimation()
   
   const {
