@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-200;
+  }
+  
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200;
+  }
+  
+  .dark .input-field {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-200 hover:shadow-lg;
+  }
+  
+  .dark .card {
+    @apply bg-gray-800 shadow-gray-900/20;
+  }
+  
+  /* Mobile-specific form styles */
+  .mobile-form {
+    @apply bg-white dark:bg-gray-800 p-3 shadow-lg;
+  }
+  
+  .mobile-form .input-field {
+    @apply py-2;
+  }
+  
+  .mobile-form h2 {
+    @apply text-sm mb-2;
+  }
+  
+  .mobile-form .space-y-2 > div {
+    @apply mb-1.5;
+  }
+  
+  .mobile-form .btn-primary {
+    @apply py-2.5;
+  }
+  
+  /* Ensure proper spacing for fixed elements */
+  @media (max-width: 1023px) {
+    .mobile-form {
+      @apply border-t border-gray-200 dark:border-gray-700;
+    }
+    
+    /* Ensure fixed header has proper background */
+    header {
+      @apply bg-white dark:bg-gray-800;
+    }
+    
+    /* Debug scroll container */
+    .scroll-container {
+      overflow-y: auto !important;
+      height: calc(100vh - 4rem - 10rem) !important;
+      padding-bottom: 8rem !important;
+    }
+    
+    /* Desktop scroll container */
+    .lg\:h-\[calc\(100vh-8rem\)\] {
+      height: calc(100vh - 8rem) !important;
+    }
+  }
+  
+  /* Desktop layout */
+  @media (min-width: 1024px) {
+    /* Ensure fixed header has proper background */
+    header {
+      @apply bg-white dark:bg-gray-800;
+    }
+  }
+  
+  /* Custom scrollbar styling */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5);
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 163, 175, 0.8);
+  }
+  
+  /* Dark mode scrollbar */
+  .dark .custom-scrollbar {
+    scrollbar-color: rgba(75, 85, 99, 0.5) transparent;
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(75, 85, 99, 0.5);
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(75, 85, 99, 0.8);
+  }
+} 
